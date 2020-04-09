@@ -27,10 +27,10 @@ const lightTheme = {
 const TTPlayer = () => {
   return (
     <ThemeProvider theme={state.nightMode ? darkTheme : lightTheme}>
-      <>
+      <StyledTTPlayer>
         <Video></Video>
         <Playlist></Playlist>
-      </>
+      </StyledTTPlayer>
     </ThemeProvider>
   );
 };
