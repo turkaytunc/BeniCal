@@ -4,11 +4,9 @@ import StyledPlaylistitems from "../styles/StyledPlaylistitems";
 
 const PlaylistItems = () => {
   return (
-    <>
-      <StyledPlaylistitems>
-        <PlaylistItem></PlaylistItem>
-      </StyledPlaylistitems>
-    </>
+    <StyledPlaylistitems>
+      <PlaylistItem></PlaylistItem>
+    </StyledPlaylistitems>
   );
 };
 

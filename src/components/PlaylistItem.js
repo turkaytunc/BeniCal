@@ -1,7 +1,8 @@
 import React from "react";
+import StyledPlaylistItem from "./styles/StyledPlaylistItem";
 
 const PlaylistItem = () => {
-  return <div>PlaylistItem</div>;
+  return <StyledPlaylistItem>PlaylistItem</StyledPlaylistItem>;
 };
 
 export default PlaylistItem;
