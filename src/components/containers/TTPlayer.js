@@ -1,7 +1,14 @@
 import React from "react";
+import Video from "../Video";
+import Playlist from "../containers/Playlist";
 
-function TTPlayer() {
-  return <div></div>;
-}
+const TTPlayer = () => {
+  return (
+    <>
+      <Video></Video>
+      <Playlist></Playlist>
+    </>
+  );
+};
 
 export default TTPlayer;
