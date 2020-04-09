@@ -1,7 +1,18 @@
-import React from 'react';
+import React from "react";
+import TTPlayer from "./TTPlayer";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => (
-  <div>Start here!</div>
-)
+  <BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <TTPlayer></TTPlayer>
+      </Route>
+      <Route exact path="/:activeVideo">
+        <TTPlayer></TTPlayer>
+      </Route>
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;
