@@ -25,12 +25,27 @@ const lightTheme = {
 };
 
 const TTPlayer = () => {
+  const nightModeCallback = () => {};
+  const endCallback = () => {};
+  const progressCallback = () => {};
   return (
     <ThemeProvider theme={state.nightMode ? darkTheme : lightTheme}>
-      <StyledTTPlayer>
-        <Video></Video>
-        <Playlist></Playlist>
-      </StyledTTPlayer>
+      {state.videos !== null ? (
+        <StyledTTPlayer>
+          <Video
+            active={state.activeVideo}
+            autoplay={state.atuplay}
+            endCallback={endCallback}
+            progressCallback={progressCallback}
+          ></Video>
+          <Playlist
+            videos={state.videos}
+            active={state.activeVideo}
+            nightModeCallback={nightModeCallback}
+            nightMode={state.nightMode}
+          ></Playlist>
+        </StyledTTPlayer>
+      ) : null}
     </ThemeProvider>
   );
 };
